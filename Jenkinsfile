@@ -22,7 +22,7 @@ pipeline {
            }    
        }
        stage('Test') {
-           agent {
+/*           agent {
                docker {
                    image 'golang'
                }
@@ -37,7 +37,7 @@ pipeline {
                sh 'go clean -cache'
                // Run Unit Tests.
                sh 'go test ./... -v -short'           
-           }
+           }*/
        }
        stage('Publish') {
            environment {
